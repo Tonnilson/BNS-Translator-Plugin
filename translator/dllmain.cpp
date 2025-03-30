@@ -17,6 +17,7 @@
 #include <format>
 #include "hash_table8.h"
 
+// Dual map because Emhash8 only supports one key, could store everything in one table but that requires templating, using a variant and it basically translate to the same thing.
 static emhash8::HashMap<std::wstring, std::wstring> alias_table;
 static emhash8::HashMap<unsigned __int64, std::wstring> id_table;
 
